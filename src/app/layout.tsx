@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import ThemeProvider from '@/components/ThemeProvider';
 import ThemeToggle from '@/components/ThemeToggle';
+import { UpdateBanner } from '@/components/UpdateBanner';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({
         <ThemeProvider>
           <ThemeToggle />
           {children}
+          <UpdateBanner />
         </ThemeProvider>
       </body>
     </html>
