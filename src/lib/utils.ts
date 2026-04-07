@@ -78,12 +78,12 @@ export function parseBulkImport(text: string): ParsedCard[] {
     const word = parts[0] || '';
     const translation = parts[1] || '';
 
-    if (!word || !translation) {
+    if (!word) {
       return {
         word,
         translation,
         valid: false,
-        error: 'Word and translation are required',
+        error: 'Word is required',
       };
     }
 

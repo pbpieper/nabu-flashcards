@@ -32,7 +32,7 @@ export default function BulkImport({ onImport, onClose }: BulkImportProps) {
         <div className="p-4 flex-1 overflow-y-auto space-y-4">
           <div>
             <label className="block text-sm text-nabu-dim mb-2">
-              Paste your cards (TSV or CSV). One card per line:
+              Paste words (one per line), or tab-separated with translations:
             </label>
             <textarea
               value={text}
@@ -40,7 +40,7 @@ export default function BulkImport({ onImport, onClose }: BulkImportProps) {
                 setText(e.target.value);
                 setPreview(null);
               }}
-              placeholder={`word\ttranslation\timage_url\texample_sentence\texplanation\n# Lines starting with # are ignored\nكلب\tdog\t\tI saw a **كلب** in the park\tMasculine noun`}
+              placeholder={`apple\nbanana\norange\n\n# Or with translations:\nكلب\tdog\nقطة\tcat\n\n# Full format (tab-separated):\nكلب\tdog\t\tI saw a **كلب** in the park\tMasculine noun`}
               className="w-full h-40 p-3 bg-nabu-bg border border-nabu-border rounded-xl text-sm font-mono text-nabu-text placeholder:text-nabu-dim/40 resize-y focus:outline-none focus:border-nabu-accent"
             />
           </div>

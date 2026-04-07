@@ -44,11 +44,15 @@ export async function POST(request: NextRequest) {
   const cards = Array.isArray(body) ? body : [body];
 
   for (const card of cards) {
-    if (!card.deck_id || !card.word || !card.translation) {
+    if (!card.deck_id || !card.word) {
       return NextResponse.json(
-        { error: 'deck_id, word, and translation required for each card' },
+        { error: 'deck_id and word required for each card' },
         { status: 400 }
       );
+    }
+    // Ensure translation is never null (Supabase NOT NULL constraint)
+    if (!card.translation) {
+      card.translation = '';
     }
   }
 
