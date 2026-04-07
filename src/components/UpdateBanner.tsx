@@ -13,7 +13,7 @@ interface PatchNote {
   version: string
   title: string
   body: string
-  created_at: string
+  published_at: string
 }
 
 /* ------------------------------------------------------------------ */
@@ -105,7 +105,7 @@ export function UpdateBanner() {
       .from('patch_notes')
       .select('*')
       .eq('app_slug', APP_SLUG)
-      .order('created_at', { ascending: false })
+      .order('published_at', { ascending: false })
       .limit(10)
       .then(({ data }) => {
         if (data && data.length > 0) {
@@ -273,7 +273,7 @@ export function UpdateBanner() {
                         v{note.version}
                       </span>
                       <time className="text-xs text-zinc-400 dark:text-zinc-500">
-                        {formatDate(note.created_at)}
+                        {formatDate(note.published_at)}
                       </time>
                     </div>
                     <h3 className="mt-1.5 text-sm font-semibold text-zinc-900 dark:text-zinc-100">{note.title}</h3>
