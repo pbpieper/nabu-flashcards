@@ -81,4 +81,4 @@ INSERT INTO public.cards (deck_id, sort_order, word, translation, part_of_speech
 ('a0000000-0000-0000-0000-000000000002', 21, 'neu', 'new', 'adjective', 'Ich habe ein **neues** Auto', 'Note the adjective ending changes with gender: neuer/neue/neues.'),
 ('a0000000-0000-0000-0000-000000000002', 22, 'Danke', 'thank you', 'phrase', '**Danke** für Ihre Hilfe!', '"Danke schön" or "Vielen Dank" for emphasis. Response: "Bitte" (you''re welcome).'),
 ('a0000000-0000-0000-0000-000000000002', 23, 'Bitte', 'please / you''re welcome', 'phrase', '**Bitte** schön!', 'Multi-purpose word: "please" (request), "you''re welcome" (response to thanks), "here you go" (handing something).'),
-('a0000000-0000-0000-0000-000000000002', 24, 'Entschuldigung', 'excuse me / sorry', 'phrase', '**Entschuldigung**, wo ist der Bahnhof?', 'Formal. Informal: "'Tschuldigung" or "Sorry." Use to get attention or apologize.');
+('a0000000-0000-0000-0000-000000000002', 24, 'Entschuldigung', 'excuse me / sorry', 'phrase', '**Entschuldigung**, wo ist der Bahnhof?', 'Formal. Informal: "''Tschuldigung" or "Sorry." Use to get attention or apologize.');
