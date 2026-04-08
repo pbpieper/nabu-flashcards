@@ -52,11 +52,11 @@ export function processReview(
       }
     }
   } else {
-    // INCORRECT: Full reset
+    // INCORRECT: Full reset — immediate re-queue, no delay
     updated.consecutive_correct = 0;
     updated.status = 'learning';
     updated.interval_days = 0;
-    updated.next_review_at = addMinutes(now, 5).toISOString();
+    updated.next_review_at = now.toISOString();
   }
 
   return updated;
@@ -82,6 +82,8 @@ export function createNewProgress(
     total_correct: 0,
     status: 'new',
     last_reviewed_at: null,
+    avg_hints_needed: 0,
+    last_hints_used: 0,
     created_at: new Date().toISOString(),
   };
 }
